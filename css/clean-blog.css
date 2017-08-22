@@ -205,6 +205,9 @@ hr.small {
   font-weight: 300;
   font-size: 20px;
 }
+.intro-header .post-headingb .meta a {
+  color: black;
+}
 .intro-header .post-heading .meta a {
   color: white;
 }
