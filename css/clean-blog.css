@@ -521,3 +521,8 @@ footer .copyright {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.central{
+  border-color: blue;
+  border-width: medium;
+}
