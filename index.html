@@ -46,17 +46,17 @@
       </div>
     </div>
     </div> -->
+    <div class="overlay"></div>
 
     <header class="masthead" style="background-color: white">
-      <div class="overlay"> </div>
 
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto py-3">
+          <div class="col-lg-7 col-md-10 mx-auto py-3">
 
 
-              <span class="meta blue"></br>_ please wait, a story is being crafted
-              </span>
+              <span class="meta blue"></br></br>_ please wait, a story is being crafted
+              </span></br></br>
 
                         <img class="gif" src="img/typing.gif">
 
@@ -64,22 +64,48 @@
           </div>
         </div>
       </div>
+
     </header>
   </div>
 
+  <div id="overlayRandom">
+<div class="overlay"></div>
+<header class="masthead" style="background-color: white">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-md-10 mx-auto py-3">
+
+
+          <span class="meta blue"></br></br>_ please wait few seconds..
+          </span></br></br>
+
+                    <img class="gif" src="img/random.gif">
+
+
+      </div>
+    </div>
+  </div>
+
+</header>
+
+</div>
 
     <div class="container">
-              <div class="col-lg-8 col-md-12 mx-auto py-3">
+              <div class="col-lg-10 col-md-12 mx-auto py-3">
       <span class="meta blue"></br>_ welcome to Luca's story telling bot
-      </br>_ select one item per line: a unique story will be crafted for you
     </br>_ find for more info about Luca<a href="about.html" class="opposite"> here</a></span>
 </div>
-        <div class="col-lg-8 col-md-12 mx-auto py-3">
+
+    <div class="row">
+
+        <div class="col-lg-8 col-md-8 mx-auto">
 
           <div class="rectangle px-3">
 
                     <div class="col-lg-12 col-md-12 mx-auto py-3">
 
+                    <span class="instead">If you are keen on getting to know me, please select one item per line: a unique story will be crafted for you</span></br></br>
 
                         <h2 class="section-heading blue home">I want to hear a full story about</h2>
                         <div id="first" class="d-flex p-2">
@@ -117,10 +143,15 @@
                             </div>
                             <div class="p-2 bd-highlight col-lg-3 col-md-3 mx-left">
                                 <a id="t2" class="btn btn-primary">a bit out of your comfort zone</a>
+                            </div>                          <div class="p-2 bd-highlight col-lg-3 col-md-3 mx-left">
+                                                      </div>
+                            <div class="p-2 bd-highlight col-lg-3 col-md-3 mx-left">
+                                <a id="generate" onclick="generateLink()" class="btn generate disabled">generate a story</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12 mx-auto py-3">
+
+                    <!-- <div class="col-lg-12 col-md-12 mx-auto py-3">
                         <div class="d-flex p-2">
                           <div class="p-2 bd-highlight col-lg-3 col-md-3 mx-left">
                           </div>
@@ -133,11 +164,31 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
 
 
           </div>
         </div>
+
+        <div class="col-lg-2 col-md-2 mx-right">
+
+          <div class="rectangle">
+            <div class="col-lg-12 col-md-12 mx-auto">
+
+</br>
+                <h2 class="section-heading instead home">Luca, dear, I only have few minutes</h2>
+                <div id="first" class="d-flex p-2">
+                    <div class="p-2 bd-highlight col-lg-12 col-md-3 mx-left">
+                          <a id="generate" onclick="generateLinkRandom()" class="btn generate">take me to a random short story</a>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+</div>
+      </div>
 
     </div>
 
@@ -192,6 +243,17 @@
       function redirect(){
           window.location.href = 'portfolio' + first_row + second_row + third_row + '.html';
       }
+
+      function redirectRandom(){
+          window.location.href = 'random' + number + '.html';
+      }
+
+      function generateLinkRandom() {
+            number = Math.floor((Math.random() * 15) + 1);
+            document.getElementById("overlayRandom").style.display = "block";
+
+            setTimeout(redirectRandom, 1000);
+        }
 
   </script>
 
